@@ -26,7 +26,6 @@ public class UsrService {
 
     public List<User_Info> getAllUsers() {  //getAll
         return rpo.findAll();
-
     }
 
     public User_Info GetValueById(int id) {
@@ -35,6 +34,9 @@ public class UsrService {
 
     public User_Info getValuByUserNem(String userNem) {
         return rpo.findByUserNem(userNem);
+    }
+    public User_Info findByEmail(String email){
+        return rpo.findByEmail(email);
     }
 
 
@@ -52,6 +54,10 @@ public class UsrService {
     public String deletdByIdea(String ideea) {
         rpo.deleteByIdeea(ideea);
         return "Idea Deledted" + ideea;
+    }
+    public String deleteByUserNem(String userNem) {
+        rpo.deleteByUserNem(userNem);
+        return "Deleted By UserName" + userNem;
     }
 
     //--------------------------------------------- Put

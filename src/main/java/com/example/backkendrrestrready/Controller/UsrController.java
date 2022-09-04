@@ -41,6 +41,10 @@ public class UsrController {
     public User_Info getValuByUserNem(@PathVariable String userNem) {
         return srvce.getValuByUserNem(userNem);
     }
+    @GetMapping("/getByUsrEmail/{email}")
+    public User_Info getValuByEmail(@PathVariable String email) {
+        return srvce.findByEmail(email);
+    }
 
 
 
@@ -64,5 +68,9 @@ public class UsrController {
     @DeleteMapping("/deletByIdeea/{iDeea}")
     public String DeletdByIdea(@PathVariable String iDeea) {
         return srvce.deletdByIdea(iDeea);
+    }
+    @DeleteMapping("/deletByUserName/{userNem}")
+    public String DeletdByUserName(@PathVariable String userNem) {
+        return srvce.deleteByUserNem(userNem);
     }
 }

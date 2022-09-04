@@ -18,12 +18,14 @@ public class User_Info {
     private int id;
 
     private String userNem;
+    private String email;
     //    هنا لازم تزبط الرمز بالايبريري...
     private String passWord;
     private String ideea;
+    private String subject;
     //نجيب الرقم من قاعدة البيانات
-    private int likes;
-    private int diLikes;
+//    private int likes;
+//    private int diLikes;
 
     public int getId() {
         return id;
